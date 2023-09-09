@@ -3,7 +3,7 @@ import Button from '../components/Button'
 
 const Home = () => {
   return (
-    <div>
+    <div className="min-h-screen flex justify-center items-center">
       <Button name="Create group"/>
       <Button name="Join group"/>
     </div>

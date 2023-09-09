@@ -16,9 +16,12 @@ function CopyTextbox({ text }) {
     <div className="relative">
       <input
         style={{ width: '350px'}}
-        className="p-2 rounded border text-center"
+        className="p-2 text-center rounded-lg border"
         readOnly
         onClick={handleCopyClick}
+        ref={textRef}
+        type="text"
+        value={text}
       />
     </div>
   );

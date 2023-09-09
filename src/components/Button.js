@@ -1,6 +1,6 @@
 const Button = (props) => {
   return (
-    <button className="btn btn-neutral m-2">{props.name}</button>
+    <button className="btn btn-neutral ml-10 mr-10">{props.name}</button>
   )
 }
 

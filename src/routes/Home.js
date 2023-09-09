@@ -13,6 +13,7 @@ const Home = () => {
       </div>
       {/* This empty div pushes the buttons container to the middle */}
       <div></div>
+      
     </div>
   );
 }

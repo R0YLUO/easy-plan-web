@@ -9,6 +9,7 @@ const Home = () => {
       <Button></Button>
       Yang
       Eunice
+      Banana
     </div>
   )
 }

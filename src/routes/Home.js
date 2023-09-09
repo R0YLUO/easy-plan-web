@@ -12,6 +12,7 @@ const Home = () => {
       Apple
       Banana
       Yang
+      Roy
     </div>
   )
 }

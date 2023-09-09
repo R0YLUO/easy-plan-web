@@ -7,6 +7,7 @@ const Home = () => {
       Home
       <Button />
       <Button></Button>
+      Yang
     </div>
   )
 }

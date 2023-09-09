@@ -8,6 +8,7 @@ const Home = () => {
       <Button />
       <Button></Button>
       Yang
+      Eunice
     </div>
   )
 }

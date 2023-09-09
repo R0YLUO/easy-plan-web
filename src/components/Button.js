@@ -1,6 +1,6 @@
-const Button = () => {
+const Button = (props) => {
   return (
-    <button className="btn btn-neutral">Click me!</button>
+    <button className="btn btn-neutral">{props.name}</button>
   )
 }
 

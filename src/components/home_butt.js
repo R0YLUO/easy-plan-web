@@ -1,5 +1,5 @@
 import React from 'react';
-import CustomSVG from '../components/button_icon/home.svg'; // Import your own SVG file locally
+import CustomSVG from '../components/image/home.svg'; // Import your own SVG file locally
 import { Link } from 'react-router-dom';
 
 const HomeButton = (props) => {

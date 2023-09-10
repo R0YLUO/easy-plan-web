@@ -22,7 +22,7 @@ const Group = () => {
           <CopyTextbox text="https://EasyPlan.com/invite?id=xdfx123" />
         </div>
         <div className="flex justify-center">
-          <div className="w-96 h-96 bg-blue-600 m-20 p-10 text-white flex rounded-lg">
+          <div className="w-96 h-96 bg-neutral/75 m-20 p-10 text-white flex rounded-lg">
             <h1 className="font-bold p-4">Group Members</h1>
             <br />
             <ul className="mt-5 p-4 text-left">

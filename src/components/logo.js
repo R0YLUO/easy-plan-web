@@ -1,5 +1,5 @@
 import React from 'react';
-import EPLogo from '../components/image/EPLogo.png'; // Import the image
+import EPLogo from '../components/image/EasyPlanGray.png'; // Import the image
 
 function Logo() {
   const logoStyles = {

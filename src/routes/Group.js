@@ -78,7 +78,10 @@ const Group = () => {
           <div className="w-96 h-96 bg-neutral/75 m-20 p-5 text-white flex flex-col justify-start items-center rounded-lg">
             <h1 className="text-xl font-bold p-2">Group Members</h1>
             <ul className="mt-3 p-4 text-left list-inside">
-              <li className="mb-2">Roy (you)</li>
+              <li className="mb-2">Bob</li>
+              <li className="mb-2">Steve</li>
+              <li className="mb-2">Stan</li>
+              <li className="mb-2">Vanessa (you)</li>
             </ul>
           </div>
 

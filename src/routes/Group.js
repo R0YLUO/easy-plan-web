@@ -1,9 +1,16 @@
 import React from 'react'
 import CopyTextbox from '../components/CopyTextbox';
+import Button from '../components/Button'
+import HomeButton from '../components/home_butt';
+import { Link } from 'react-router-dom';
+
 
 const Group = () => {
   return (
+    
     <div className="text-center">
+      <HomeButton className ="float-left"/>
+
       <h1 className="text-4xl font-bold mt-10">Group X</h1>
 
       <div className="text-2xl mt-10">Invite your friends:</div>
@@ -20,10 +27,12 @@ const Group = () => {
               <li className="mb-2">Member 2</li>
               <li className="mb-2">Member 3</li>
             </ul>
+        <div className="flex justify-end">
+          <Button name="Update Preferences" />
+          <Button name="Generate Restaurants" />
         </div>
-      
-      
-      </div>
+      </div>      
+    </div>
 
   )
 }

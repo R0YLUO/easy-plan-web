@@ -14,34 +14,34 @@ const Group = () => {
       </div>
 
       <div className="flex flex-col items-center">
-        <h1 className="text-4xl font-bold mt-10">Group X</h1>
-
-        <div className="text-2xl mt-10">Invite your friends:</div>
-
-        <div className="flex justify-center mt-5">
+        
+        <h1 className="text-4xl font-bold mt-10 mb-10">Group X</h1>
+        
+        <div className="flex flex-col items-center mt-5">
+          <h1 className='text-2xl mb-5'>Invite your friends:</h1>
           <CopyTextbox text="https://EasyPlan.com/invite?id=xdfx123" />
         </div>
-        <div className="flex justify-center">
+
+
+        <div className="flex justify-between">
           <div className="w-96 h-96 bg-neutral/75 m-20 p-10 text-white flex rounded-lg">
             <h1 className="font-bold p-4">Group Members</h1>
-            <br />
-            <ul className="mt-5 p-4 text-left">
+            <ul className="mt-5 p-4 text-left list-inside">
               <li className="mb-2">Member 1</li>
               <li className="mb-2">Member 2</li>
               <li className="mb-2">Member 3</li>
             </ul>
           </div>
 
-          <div className="flex justify-center items-center flex-col">
+          <div className="flex flex-col justify-center">
             <Button name="Update Preferences" />
-            <br />
+            <br/>
             <Button name="Generate Restaurants" />
           </div>
-
         </div>
+
       </div>
     </div>
-
   )
 }
 

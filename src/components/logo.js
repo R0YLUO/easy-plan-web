@@ -9,9 +9,9 @@ function Logo() {
   };
 
   return (
-    <div>
+
       <img src={EPLogo} alt="EPLogo" />
-    </div>
+
   );
 }
 

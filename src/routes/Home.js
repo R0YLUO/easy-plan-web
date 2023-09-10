@@ -18,9 +18,9 @@ const Home = () => {
   }
 
   return (
-    <div className="min-h-screen flex flex-col justify-between">
-      <HomeButton />
-      <div className="text-center">
+    <div className="min-h-screen flex flex-col justify-between py-16" >
+
+      <div className="flex justify-center">
         <Logo />
       </div>
       <div

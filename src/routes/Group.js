@@ -2,14 +2,29 @@ import CopyTextbox from "../components/CopyTextbox";
 import Button from "../components/Button";
 import HomeButton from "../components/home_butt";
 import { useLoaderData } from "react-router-dom";
-
+import { useEffect, useState } from "react";
 export async function loader({ params }) {
   return { groupId: params.groupId };
 }
 
 const Group = () => {
-  
   const { groupId } = useLoaderData();
+  const [name, setName] = useState("");
+
+  useEffect(() => {
+    const savedName = localStorage.getItem("name");
+    if (!savedName) {
+      document.getElementById("my_modal_1").showModal();
+    }
+  }, []);
+
+  function handleInputChange(event) {
+    setName(event.target.value);
+  }
+
+  function handleJoin() {
+    localStorage.setItem("name", name);
+  }
 
   async function getRecommendations() {
     const result = await fetch("http://localhost:5000/recommendations", {
@@ -21,12 +36,33 @@ const Group = () => {
     // Redirect to the recommendations page
     window.location.href = `/recommendations/${groupId}`;
   }
-    
+
   return (
     <div className="text-center justify min-h-screen">
       <div className="flex justify-between items-start">
         <HomeButton />
       </div>
+      <dialog id="my_modal_1" className="modal">
+        <div className="modal-box">
+          <h3 className="font-bold text-lg">Welcome to your group!</h3>
+          <p className="text-sm">Enter your name to join:</p>
+          <input
+            type="text"
+            placeholder="Your Name"
+            className="input w-full max-w-xs bg-white text-black mt-2"
+            value={name}
+            onChange={handleInputChange}
+          />
+          <div className="modal-action">
+            <form method="dialog">
+              {/* if there is a button in form, it will close the modal */}
+              <button className="btn" onClick={handleJoin}>
+                Join
+              </button>
+            </form>
+          </div>
+        </div>
+      </dialog>
 
       <div className="flex flex-col items-center">
         <h1 className="text-4xl font-bold mt-10 mb-10">Group X</h1>
@@ -48,7 +84,7 @@ const Group = () => {
 
           <div className="flex flex-col justify-center">
             <Button name="Update Preferences" />
-            <br/>
+            <br />
             <Button callBack={getRecommendations} name="Generate Restaurants" />
           </div>
         </div>

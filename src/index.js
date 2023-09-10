@@ -20,7 +20,7 @@ const router = createBrowserRouter([
     loader: groupIdLoader,
   },
   {
-    path: "/recommendations",
+    path: "/recommendations/:groupId",
     element: <Recommendations />,
   },
 ]);

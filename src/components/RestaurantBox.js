@@ -6,7 +6,7 @@ const RestaurantBox = () => {
           <br />
           Cuisine:
           <br />
-          Distance:
+          Address:
         </div>
       </div>
     );

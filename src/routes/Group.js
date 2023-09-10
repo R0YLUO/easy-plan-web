@@ -2,6 +2,7 @@ import CopyTextbox from "../components/CopyTextbox";
 import Button from "../components/Button";
 import HomeButton from "../components/home_butt";
 import { useLoaderData } from "react-router-dom";
+import SetPreferences from "../components/SetPreferences";
 
 export async function loader({ params }) {
   return { groupId: params.groupId };
@@ -47,7 +48,7 @@ const Group = () => {
           </div>
 
           <div className="flex flex-col justify-center">
-            <Button name="Update Preferences" />
+            <SetPreferences />
             <br/>
             <Button callBack={getRecommendations} name="Generate Restaurants" />
           </div>

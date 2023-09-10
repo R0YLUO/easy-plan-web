@@ -1,15 +1,6 @@
 import React, { useState } from "react";
 
 const SetPreferences = () => {
-  const [groupId, setGroupId] = useState("");
-
-  function joinHandler() {
-    window.location.href = `/recommendations/${groupId}`;
-  }
-
-  const handleInputChange = (event) => {
-    setGroupId(event.target.value);
-  };
 
   return (
     <div>
@@ -28,16 +19,12 @@ const SetPreferences = () => {
             type="text"
             placeholder="Food preferences"
             className="input w-full max-w-xs bg-white text-black mt-2"
-            value={groupId}
-            onChange={handleInputChange}
           />
           <h3 className="font-bold text-lg">Enter location</h3>
           <input
             type="text"
             placeholder="Location"
             className="input w-full max-w-xs bg-white text-black mt-2"
-            value={groupId}
-            onChange={handleInputChange}
           />
           <div className="modal-action">
             <form method="dialog">

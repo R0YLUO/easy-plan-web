@@ -11,6 +11,17 @@ export async function loader({ params }) {
 const Group = () => {
   const { groupId } = useLoaderData();
 
+  async function getRecommendations() {
+    const result = await fetch("http://localhost:5000/recommendations", {
+      method: "GET",
+    });
+
+    const data = await result.json();
+
+    // Redirect to the recommendations page
+    window.location.href = `/recommendations/${groupId}`;
+  }
+
   return (
     
     <div className="text-center justify min-h-screen">
@@ -40,7 +51,7 @@ const Group = () => {
           <div className="flex flex-col justify-center">
             <Button name="Update Preferences" />
             <br/>
-            <Button name="Generate Restaurants" />
+            <Button callBack={getRecommendations} name="Generate Restaurants" />
           </div>
         </div>
 

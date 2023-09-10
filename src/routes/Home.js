@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../components/Button";
 import HomeButton from "../components/home_butt";
 import { Link } from 'react-router-dom';
-import EPLogo from '../components/image'; // Import the image
+import Logo from "../components/logo";
 
 const Home = () => {
   async function createGroup() {
@@ -19,9 +19,9 @@ const Home = () => {
   return (
     <div className="min-h-screen flex flex-col justify-between">
       <HomeButton />
-      
+
       <div className="text-center">
-        <img src={EPLogo} alt="EPLogo" />
+        <Logo />
       </div>
 
       <div className="text-center mb-4" style={{ maxWidth: '600px', margin: '0 auto' }}>

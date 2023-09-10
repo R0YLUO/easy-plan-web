@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const Group = () => {
   return (
     
-    <div className="text-center">
+    <div className="text-center justify min-h-screen">
       <div className="flex justify-between items-start">
         <HomeButton />
       </div>

@@ -9,8 +9,9 @@ export async function loader({ params }) {
 }
 
 const Group = () => {
+  
   const { groupId } = useLoaderData();
-
+    
   return (
     
     <div className="text-center justify min-h-screen">

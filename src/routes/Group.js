@@ -1,7 +1,6 @@
-import React from 'react'
-import CopyTextbox from '../components/CopyTextbox';
-import Button from '../components/Button'
-import HomeButton from '../components/home_butt';
+import CopyTextbox from "../components/CopyTextbox";
+import Button from "../components/Button";
+import HomeButton from "../components/home_butt";
 import { useLoaderData } from "react-router-dom";
 
 export async function loader({ params }) {
@@ -24,19 +23,17 @@ const Group = () => {
   }
     
   return (
-    
     <div className="text-center justify min-h-screen">
       <div className="flex justify-between items-start">
         <HomeButton />
       </div>
 
       <div className="flex flex-col items-center">
-        
         <h1 className="text-4xl font-bold mt-10 mb-10">Group X</h1>
-        
-        <div className="flex flex-col items-center mt-5">
-          <h1 className='text-2xl mb-5'>Invite your friends:</h1>
-          <CopyTextbox text={`https://EasyPlan.com/invite?id=${groupId}`} />
+
+        <div className="flex flex-col items-center mt-5 ">
+          <h1 className="text-2xl mb-5">Invite your friends:</h1>
+          <CopyTextbox text={groupId} />
         </div>
 
         <div className="flex justify-between">
@@ -55,10 +52,9 @@ const Group = () => {
             <Button callBack={getRecommendations} name="Generate Restaurants" />
           </div>
         </div>
-
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Group
+export default Group;

@@ -20,7 +20,7 @@ const Home = () => {
     <div className="min-h-screen flex flex-col justify-between">
       <HomeButton />
 
-      <div className="text-center">
+      <div className="flex justify-center">
         <Logo />
       </div>
 

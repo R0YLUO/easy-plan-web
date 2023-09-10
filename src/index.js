@@ -6,7 +6,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Home from "./routes/Home";
-import Group from "./routes/Group";
+import Group, { loader as groupIdLoader } from "./routes/Group";
 import Recommendations from "./routes/Recommendations";
 
 const router = createBrowserRouter([
@@ -15,8 +15,9 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "/group",
+    path: "/group/:groupId",
     element: <Group />,
+    loader: groupIdLoader,
   },
   {
     path: "/recommendations",

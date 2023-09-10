@@ -2,10 +2,15 @@ import React from 'react'
 import CopyTextbox from '../components/CopyTextbox';
 import Button from '../components/Button'
 import HomeButton from '../components/home_butt';
-import { Link } from 'react-router-dom';
+import { useLoaderData } from "react-router-dom";
 
+export async function loader({ params }) {
+  return { groupId: params.groupId };
+}
 
 const Group = () => {
+  const { groupId } = useLoaderData();
+
   return (
     
     <div className="text-center justify min-h-screen">
@@ -19,7 +24,7 @@ const Group = () => {
         
         <div className="flex flex-col items-center mt-5">
           <h1 className='text-2xl mb-5'>Invite your friends:</h1>
-          <CopyTextbox text="https://EasyPlan.com/invite?id=xdfx123" />
+          <CopyTextbox text={`https://EasyPlan.com/invite?id=${groupId}`} />
         </div>
 
 

@@ -1,12 +1,12 @@
-const RestaurantBox = () => {
+const RestaurantBox = (props) => {
     return (
-      <div className="w-full h-fit bg-neutral-400/25 p-5 text-white flex rounded-lg">
+      <div className={`w-full h-fit ${props.background} p-5 text-white flex rounded-lg`}>
         <div className="text-left">
-          Restaurant:
+          <p className="font-bold inline">Restaurant:</p> {props.restaurant}
           <br />
-          Cuisine:
+          <p className="font-bold inline">Cuisine:</p> {props.cuisine}
           <br />
-          Address:
+          <p className="font-bold inline">Address:</p> {props.address}
         </div>
       </div>
     );

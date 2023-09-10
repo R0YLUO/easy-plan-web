@@ -9,6 +9,7 @@ export async function loader({ params }) {
 }
 
 const Group = () => {
+  
   const { groupId } = useLoaderData();
 
   async function getRecommendations() {
@@ -21,7 +22,7 @@ const Group = () => {
     // Redirect to the recommendations page
     window.location.href = `/recommendations/${groupId}`;
   }
-
+    
   return (
     
     <div className="text-center justify min-h-screen">

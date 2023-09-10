@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../components/Button";
 import HomeButton from "../components/home_butt";
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   async function createGroup() {

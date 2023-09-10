@@ -8,11 +8,11 @@ const SetPreferences = () => {
       <button
         className="btn btn-neutral ml-10 mr-10"
         style={{ width: '150px' }}
-        onClick={() => document.getElementById("my_modal_1").showModal()}
+        onClick={() => document.getElementById("my_modal_2").showModal()}
       >
         Update Preferences
       </button>
-      <dialog id="my_modal_1" className="modal">
+      <dialog id="my_modal_2" className="modal">
         <div className="modal-box space-y-5">
           <h3 className="font-bold text-lg">Enter food preferences</h3>
           <input
